@@ -1,0 +1,223 @@
+body {
+	margin: 0;
+	font-family: Monospace;
+	font-size: 13px;
+	line-height: 24px;
+	overscroll-behavior: none;
+}
+
+button {
+	cursor: pointer;
+	text-transform: uppercase;
+}
+
+canvas {
+	display: block;
+/*    background: linear-gradient(to bottom, #2473ab 0%,#1e528e 20%,#5b7983 33%) */
+    background: linear-gradient(to bottom, #071B26 0%,#071B26 10%,#8A3B12 25%,#240E03 33%)
+/*    background: linear-gradient(to bottom,  #11e8bb 0%, #8200c9 33%); */
+}
+
+#info {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center;
+	user-select: none;
+	pointer-events: none;
+	z-index: 1; /* TODO Solve this in HTML */
+}
+
+a, button, input, select {
+	pointer-events: auto;
+}
+
+.dg.ac {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	z-index: 2 !important; /* TODO Solve this in HTML */
+}
+
+#overlay {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height:100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 1;
+	background-color: #000000;
+	color: #ffffff;
+}
+
+#overlay > div {
+	text-align: center;
+}
+
+#overlay > div > button {
+	height: 20px;
+	background: transparent;
+	color: #ffffff;
+	outline: 1px solid #ffffff;
+	border: 0px;
+	cursor: pointer;
+}
+
+#overlay > div > p {
+	color: #777777;
+	font-size: 12px;
+}
+
+.popup {
+    position:fixed;
+    padding: 10px;
+    max-width: 500px;
+    border-radius: 25px;  
+    left: -50%;
+    top: 50%;
+    transform:translate(-50%,-50%);
+    background: var(--header-bg,#000);
+    outline: none;
+    display: flex; 
+    flex-direction:row;
+    align-items:center;
+    text-align: center;
+    z-index: 100;
+    font-size: x-large;
+    opacity: 0.95;
+}
+
+#debug {
+	position: absolute;
+	left: 1em;
+	top: 3em;
+	padding: 1em;
+	background: rgba(0, 0, 0, 0.8);
+	color: white;
+	font-family: monospace;
+	visibility: hidden;
+}
+
+
+.annotation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 997;
+    color: var(--primary-color);
+    background: var(--body-bg,#000);
+    transition: opacity .5s;
+    width: 5em;
+    height: 4em;
+    border-radius: 30%;
+    text-align: center;
+    border-color: var(--primary-color);
+    border-width: solid;
+    border-style: solid;
+    opacity: 0.6;
+    display: table;
+}
+
+.annotation p {
+  display: table-cell; 
+  vertical-align: middle; 
+  text-align: center;
+  line-height: 1em;
+}
+
+ .swibu {
+     width: 200px;
+     height: 25px;
+     text-align: center;
+     position: absolute;
+     will-change: transform;
+     transition: 0.3s ease all;
+     border: 1px solid #012;
+     background: var(--body-bg,#000);
+     z-index: 998;
+}
+ .swibu-case {
+     display: inline-block;
+     background: none;
+     width: 49%;
+     height: 100%;
+     color: var(--widget-text-color,#def);
+     position: relative;
+     border: none;
+     transition: 0.3s ease all;
+     padding-bottom: 1px;
+     z-index: 999;
+}
+ .swibu-case:hover {
+     color: var(--primary-color,#fff);
+}
+ .swibu-case:focus {
+     outline: none;
+}
+ .swibu .swibuactive {
+     color: var(--widget-text-color,#def);
+     background-color: var(--primary-color,#fff);
+     position: absolute;
+     left: 0;
+     top: 0;
+     width: 50%;
+     height: 100%;
+     z-index: 998;
+     transition: 0.3s ease-out all;
+}
+ .swibu .swibuactive-case {
+     color: #000/*var(--widget-text-color,#def);*/
+}
+
+round-slider {
+    float: left; 
+    width: 75px; 
+    --round-slider-path-width: 7;
+    --round-slider-path-color: var(--widget-design-bg,#def);
+    --round-slider-bar-color: var(--primary-color);
+    --round-slider-handle-color: var(--primary-color);
+}
+ 
+
+
+
+.dropbtn {
+  background-color: var(--primary-color);
+  color: #000;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--widget-design-bg,#def);
+/*  min-width: 160px;*/
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 999;
+  text-align: left;
+}
+
+.dropdown-content option {
+  color: var(--widget-text-color,#def);
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content option:hover {background-color: var(--primary-color)}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
