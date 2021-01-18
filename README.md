@@ -6,14 +6,14 @@ This is just a quick example of how to implement it in Openhab 2.5 habpanel. Fee
 ## Requires
 Put the following files and the included files of this repo in the subfolder \openhab\conf\html\three
 
-- jquery-3.4.1.min.js
-- three.js  -> https://unpkg.com/browse/three@0.115.0/
-- OrbitControls.js  
-- GLTFLoader.js
-- dat.gui.js
-- Sky.js
-- CSS2DRenderer.js
-- RectAreaLightUniformsLib.js
+- [jquery-3.4.1.min.js](https://jquery.com/) -> https://code.jquery.com/jquery-3.4.1.js
+- [three.js](https://threejs.org/)  -> https://unpkg.com/browse/three@0.115.0/
+- [OrbitControls.js](https://threejs.org/docs/#examples/en/controls/OrbitControls) -> https://github.com/mrdoob/three.js/blob/master/examples/jsm/controls/OrbitControls.js  
+- [GLTFLoader.js](https://threejs.org/docs/#examples/en/loaders/GLTFLoader) -> https://github.com/mrdoob/three.js/blob/master/examples/jsm/loaders/GLTFLoader.js 
+- [dat.gui.js](https://github.com/dataarts/dat.gui) -> https://github.com/dataarts/dat.gui/blob/master/build/dat.gui.js
+- [Sky.js](https://github.com/loginov-rocks/three-sky) -> https://github.com/mrdoob/three.js/blob/master/examples/js/objects/Sky.js
+- [CSS2DRenderer.js](https://threejs.org/docs/#examples/en/renderers/CSS2DRenderer) -> https://github.com/mrdoob/three.js/blob/master/examples/jsm/renderers/CSS2DRenderer.js
+- [RectAreaLightUniformsLib.js](https://threejs.org/docs/#api/en/lights/RectAreaLight) -> https://github.com/mrdoob/three.js/blob/master/src/lights/RectAreaLight.js
 - round-slider.js  -> https://github.com/thomasloven/round-slider
 - suncalc.js    -> https://github.com/mourner/suncalc
 
